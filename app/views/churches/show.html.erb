@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @church.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @church.description %>
+</p>
+
+<%= link_to 'Back', churches_path %>
+<%= link_to 'Edit', edit_church_path(@church) %>

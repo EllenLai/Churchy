@@ -1,0 +1,35 @@
+<h1>Editing Church</h1>
+
+<%= form_for :church, url: church_path(@church), method: :patch do |f| %>
+
+  <% if @church.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@church.errors.count, "error") %> prohibited this article from being saved:
+      </h2>
+      <ul>
+        <% @church.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%=  f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <% end %>
+
+  <%= link_to 'Back', churches_path %>
