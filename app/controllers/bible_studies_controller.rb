@@ -39,6 +39,6 @@ class BibleStudiesController < ApplicationController
 
   private
     def bible_study_params
-      params.require(:bible_study).permit(:name, :date, :location, :description)
+      params.require(:bible_study).permit(:name, :date, :location, :description, :church_id)
     end
 end

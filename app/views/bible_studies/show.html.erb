@@ -18,5 +18,10 @@
   <%= @bible_study.description %>
 </p>
 
+<p>
+  <strong>Church</strong>
+  <%= @bible_study.church_id%>
+</p>
+
 <%= link_to 'Back', bible_studies_path %>
 <%= link_to 'Edit', edit_bible_study_path(@bible_study) %>

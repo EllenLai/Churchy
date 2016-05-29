@@ -8,6 +8,8 @@
     <th>Date</th>
     <th>Location</th>
     <th>Description</th>
+    <th>Church</th>
+
   </tr>
 
 <% @bible_studies.each do |bible_study| %>
@@ -16,6 +18,7 @@
     <td><%= bible_study.date %></td>
     <td><%= bible_study.location %></td>
     <td><%= bible_study.description %></td>
+    <td><%= bible_study.church_id %></td>
     <td><%= link_to 'Show', bible_study_path(bible_study) %></td>
     <td><%= link_to 'Edit', edit_bible_study_path(bible_study) %></td>
   </tr>

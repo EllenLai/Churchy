@@ -6,12 +6,14 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
+
   </tr>
 
 <% @churches.each do |church| %>
   <tr>
     <td><%= church.name %></td>
     <td><%= church.description %></td>
+
     <td><%= link_to 'Show', church_path(church) %></td>
     <td><%= link_to 'Edit', edit_church_path(church) %></td>
   </tr>
