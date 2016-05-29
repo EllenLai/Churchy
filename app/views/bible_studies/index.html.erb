@@ -1,0 +1,25 @@
+<h1>Listing all Bible Studies</h1>
+
+<%= link_to 'New Bible Study', new_bible_study_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Description</th>
+  </tr>
+
+<% @bible_studies.each do |bible_study| %>
+  <tr>
+    <td><%= bible_study.name %></td>
+    <td><%= bible_study.date %></td>
+    <td><%= bible_study.location %></td>
+    <td><%= bible_study.description %></td>
+    <td><%= link_to 'Show', bible_study_path(bible_study) %></td>
+    <td><%= link_to 'Edit', edit_bible_study_path(bible_study) %></td>
+  </tr>
+
+  <% end %>
+
+</table>

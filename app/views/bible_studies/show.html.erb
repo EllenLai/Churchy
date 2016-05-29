@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @bible_study.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @bible_study.date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @bible_study.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bible_study.description %>
+</p>
+
+<%= link_to 'Back', bible_studies_path %>
+<%= link_to 'Edit', edit_bible_study_path(@bible_study) %>
