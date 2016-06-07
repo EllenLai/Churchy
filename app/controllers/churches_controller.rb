@@ -1,8 +1,9 @@
 class ChurchesController < ApplicationController
 
   def index
-    @churches = Church.all
+    @churches = Church.all.paginate(:per_page => 1, :page => params[:page])
   end
+
 
 
   def show
