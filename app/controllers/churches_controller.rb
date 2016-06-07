@@ -1,7 +1,7 @@
 class ChurchesController < ApplicationController
 
   def index
-    @churches = Church.all.paginate(:per_page => 1, :page => params[:page])
+    @churches = Church.all.search(params[:search]).paginate(:per_page => 2, :page => params[:page])
   end
 
 

@@ -2,6 +2,15 @@
 
 <%= link_to 'New Church', new_church_path %>
 
+<%= form_tag churches_path, :method => 'get', :id => "churches_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+
+<% end %>
+
+
 <table>
   <tr>
     <th>Name</th>
