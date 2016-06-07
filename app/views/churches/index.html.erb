@@ -15,7 +15,7 @@
     <td><%= church.name %></td>
     <td><%= church.description %></td>
      <td><%church.bible_studies.each do |study| %>
-      <%= study.name %>
+      <%= study.name %><br>
       <% end %></td>
 
     <td><%= link_to 'Show', church_path(church) %></td>
