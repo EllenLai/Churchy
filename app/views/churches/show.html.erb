@@ -8,5 +8,14 @@
   <%= @church.description %>
 </p>
 
+<p>
+  <strong>Bible Study</strong>
+  <% @church.bible_studies.each do |study| %>
+  <%= study.name %>
+  <% end %>
+</p>
+
+
+
 <%= link_to 'Back', churches_path %>
 <%= link_to 'Edit', edit_church_path(@church) %>
