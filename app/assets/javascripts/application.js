@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $("#churches td, #churches .pagination a").on("click", function(){
+    $.getScript(this.href);
+    return false;
+  });
+  $("#churches_search input").keyup(function(){
+    $.get($("#churches_search").attr("action"), $("#churches_search").serialize(), null, "script");
+    return false;
+  });
+});
